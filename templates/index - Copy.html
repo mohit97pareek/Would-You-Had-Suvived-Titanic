@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Would You Have Survived Titanic?</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{{url_for('static',filename = 'fonts/material-icon/css/material-design-iconic-font.min.css')}}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{{url_for('static',filename = 'css/style.css')}}">
+</head>
+<body>
+
+    <div class="main">
+        <div class="container">
+
+            <div class="signup-content">
+
+                <div class="signup-img">
+
+                    <img src="{{url_for('static',filename = 'images/signup-img.jpg')}}" alt="">
+                </div>
+                <div class="signup-form">
+                    <h1 style="text-align: center;">Would you have survived At Titanic?</h1>
+                    
+
+                    <form method="POST" class="register-form" id="register-form" action = '/first'>
+                        
+                        <h2 style="margin-left: 200px;">Details Form</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                
+                                <label for="name">Surfix</label>                               
+                                <div class="form-select">
+                                    <select name="surfix" id="surfix">
+                                        <option name = "surfix" value="mr">Mr.</option>
+                                        <option name = "surfix" value="master">Master</option>
+                                        <option name = "surfix" value="miss">Miss</option>
+                                        <option name = "surfix" value="mrs">Mrs.</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Name :</label>
+                                <input type="text" name="name" id="name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="last_name">Last Name :</label>
+                                <input type="text" name="last_name" id="last_name"/>
+                            </div>
+                        </div>
+
+                        
+                        <div class="form-radio">
+                            <label for="gender" class="radio-label">Gender :</label>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="male" checked>
+                                <label for="male">Male</label>
+                                <span class="check"></span>
+                            </div>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="female">
+                                <label for="female">Female</label>
+                                <span class="check"></span>
+                            </div>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="other">
+                                <label for="other">Other</label>
+                                <span class="check"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="age">Age :</label>
+                                <input type="number" name="age" id="age" >
+                            </div>
+                             <div class="form-group">
+                                <label for="pclass">Passcenger Class :</label>
+                                <select name="pclass" id="pclass">
+                                        <option value="0">Choose Below Category</option>
+                                        <option value="1">First Class</option>
+                                        <option value="2">Second Class</option>
+                                        <option value="3">Third Class</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="weight">Weight:</label>
+                                <input type="number" name="weight" id="weight"placeholder="(in kgs)" >
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="height">Height :</label>
+                                <input type="number" name="height" id="height" placeholder="(in cms)" >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Address :</label>
+                            <input type="text" name="address" id="address">
+                        </div>
+                        <div class="form-row">
+                             <div class="form-group">
+                                <label for="city">City :</label>
+                                <input type="text" name="city" id="city">                            
+                            </div>
+                            <div class="form-group">
+                                <label for="state">State :</label>
+                                <input type="text" name="state" id="state">
+                            </div>
+                           
+                        </div>
+                        <div class="form-group">
+                            <label for="pincode">Pincode :</label>
+                            <input type="number" name="pincode" id="pincode">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="SibSp">Number of siblings or spouses</label>
+                                <select name="SibSp" id="SibSp">
+                                        <option value="NaN">Choose Below</option>
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">more than 3</option>
+                                </select>
+                                
+                            </div>
+                            <div class="form-group">
+                                <label for="Parch">Number of parents of children</label>
+                                <select name="Parch" id="Parch">
+                                        <option value="NaN">Choose Below</option>
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">more than 3</option>
+                                </select>                           
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fare">Fare :</label>
+                                <input type="number" name="fare" id="fare" >
+                            </div>
+                            <div class="form-group">
+                                <label for="cabin">Cabin :</label>
+                                <input type="text" name="cabin" id="cabin" >                            
+                            </div>
+                            <div class="form-group">
+                                <label for="Embarked">Boarded At :</label>
+                                <input type="text" name="Embarked" id="Embarked" >                            
+                            </div>
+                        </div>
+
+                        <div class="form-submit">
+                            <input type="submit" value="Reset All" class="submit" name="reset" id="reset" />
+                            <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
